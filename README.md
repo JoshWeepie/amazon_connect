@@ -17,7 +17,7 @@ and sets the DynamoDB table for the project, and lastly inserts the calling phon
 
 Contact Flow
 -------------
-![Contact Flow](https://github.com/JoshWeepie/amazon_connect/blob/main/contact_flow_diagram.PNG)
+![Contact Flow](https://github.com/JoshWeepie/amazon_connect/blob/main/contact_flow.PNG)
 
 The contact flow first enables logging, then invokes the Lambda function to randomly generate a name. The name is then stored in DynamoDB along with the caller's phone number,
 and then can be retrieved and repeated back to the caller if they follow the prompt.
