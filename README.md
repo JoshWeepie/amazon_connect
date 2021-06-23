@@ -13,7 +13,7 @@ Lambda function
 
 In the lambda function, I fetch the calling phone number from the Amzon Connect [JSON](https://docs.aws.amazon.com/connect/latest/adminguide/connect-lambda-functions.html#function-contact-flow) request and
 generate a first name and last name with the [names](https://pypi.org/project/names/) package. Next, the function retrieves the DynamoDB [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html) service resource 
-and sets the DynamoDB table for the project, and lastly inserts the calling phone number, date, and the first and last name that was generated for the caller.
+and sets the DynamoDB table for the project, and lastly inserts the calling phone number, date, first name, and last name that was generated for the caller into DynamoDB.
 
 Contact Flow
 -------------
