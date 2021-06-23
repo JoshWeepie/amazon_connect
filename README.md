@@ -22,9 +22,9 @@ Contact Flow
 The contact flow first enables logging, then invokes the Lambda function to randomly generate a name. The name is then stored in DynamoDB along with the caller's phone number,
 and then can be retrieved and repeated back to the caller if they follow the prompt.
 
-Web App and ClouWatch log parsing
+Web App and CloudWatch log parsing
 -------------
-The web app is  simple Flask Web app uploaded to an Ubuntu EC2 instance with Nginx as the web server. I assigned an Elastic IP and used my domain in Route 53 to create the DNS A record. 
+The web app is a simple Flask Web app uploaded to an Ubuntu EC2 instance with Nginx as the web server. I assigned an Elastic IP and used my domain in Route 53 to create the DNS A record. 
 
 The [cloudwatchlogs.py](https://github.com/JoshWeepie/amazon_connect/blob/main/flask-app/cloudwatchlogs.py) file Quries logs in the CloudWatch AWS Connect log group log streams using the Boto3 [CloudWatchLogs](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#cloudwatchlogs)
 client. The library filters based on the filter pattern "calling_phone_number", and returns the results in a dictionary that is fetched with the 
