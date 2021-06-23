@@ -24,8 +24,8 @@ and then can be retrieved and repeated back to the caller if they follow the pro
 
 Web App and CloudWatch log parsing
 -------------
-The web app is a simple Flask Web app uploaded to an Ubuntu EC2 instance with Nginx as the web server. I assigned an Elastic IP and used my domain in Route 53 to create the DNS A record. 
+The web app is a simple Flask web app uploaded to an Ubuntu EC2 instance with Nginx as the web server. I assigned an Elastic IP and used my domain in Route 53 to create the DNS A record. 
 
-The [cloudwatchlogs.py](https://github.com/JoshWeepie/amazon_connect/blob/main/flask-app/cloudwatchlogs.py) file Quries logs in the CloudWatch AWS Connect log group log streams using the Boto3 [CloudWatchLogs](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#cloudwatchlogs)
+I made a simple library [cloudwatchlogs.py](https://github.com/JoshWeepie/amazon_connect/blob/main/flask-app/cloudwatchlogs.py) file that queries logs in the CloudWatch AWS Connect log group log streams using the Boto3 [CloudWatchLogs](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#cloudwatchlogs)
 client. The library filters based on the filter pattern "calling_phone_number", and returns the results in a dictionary that is fetched with the 
 "home" function in application.py, and then is parsed by Jinja in the home.html file.
