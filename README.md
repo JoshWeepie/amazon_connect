@@ -5,7 +5,13 @@ Amazon Connect phone number: 1-845-318-2265
 
 Web app to display last 5 callers and randomly generated name: https://connect.joshweepie.com/
 
-![Contact Flow](https://github.com/JoshWeepie/amazon_connect/blob/main/architecture.PNG)
+EC2 Diagram
+-------------
+![EC2 Diagram](https://github.com/JoshWeepie/amazon_connect/blob/main/architecture.PNG)
+
+ECS Digram
+-------------
+![ECS Diagram](https://github.com/JoshWeepie/amazon_connect/blob/main/alb_ecs.PNG)
 
 Lambda function
 -------------
